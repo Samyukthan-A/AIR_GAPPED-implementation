@@ -19,8 +19,8 @@ To create a fully air-gapped system for storing passwords completely offline and
 4. Type `"adb devices"` to check if your device is connected.  
 5. Type `"adb shell pm list packages | findstr #device_maker"` (replace `#device_maker` with your device brand, e.g., `adb shell pm list packages | findstr samsung`).  
 6. You will now see all the preinstalled services. To ensure the device is air-gapped and secure, remove any vulnerabilities:  
-   - **Option 1**: Disable the service.  
-   - **Option 2**: Uninstall the service (**cannot be reversed**).  
+   - **Option 1**: Disable the service.  `adb shell pm disable-user --user 0 #service_name`
+   - **Option 2**: Uninstall the service (**cannot be reversed**).  `adb shell pm uninstall --user 0 #service_name`
 7. Before disabling or uninstalling Wi-Fi-related services, install a password manager and a file manager. I chose to stay open-source and downloaded **KeepassDX** from **F-Droid**.  
 8. Download any other safe and open-source applications you may need.  
 9. Disable **Wi-Fi** and any other network-related services.  
