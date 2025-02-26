@@ -1,5 +1,5 @@
 # AIR_GAPPED Implementation  
-
+Review the flowchat for the working process
 This is an implementation of an air-gapped system to securely store all my backups and passwords.  
 
 ## Used Devices  
